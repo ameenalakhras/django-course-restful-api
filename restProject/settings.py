@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'book_exchange.apps.BookExchangeConfig',
-    # 'userInfo.apps.UserinfoConfig',
+    'userInfo.apps.UserinfoConfig',
 
 ]
 
@@ -76,6 +76,9 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         # 'rest_framework.permissions.IsAuthenticatedOrReadOnly',
         # 'restProject.serializers.IsOwnerOrReadOnly',
+    ),
+    'DEFAULT_FILTER_BACKENDS': (
+    'django_filters.rest_framework.DjangoFilterBackend',
     )
 }
 

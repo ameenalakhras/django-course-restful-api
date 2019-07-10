@@ -19,7 +19,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("api/", include("book_exchange.urls")),
-    # path("api/", include("userInfo.urls")),
+    path("api/", include("userInfo.urls")),
     # including the login and the logout for the restful framework
     path(r'^api-auth/', include('rest_framework.urls'))
 ]
