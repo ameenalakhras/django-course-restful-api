@@ -20,21 +20,3 @@ class OfferSerializer(serializers.ModelSerializer):
     class Meta:
         model = Offer
         fields = '__all__'
-
-
-#
-# class ProductList(generics.ListAPIView):
-#     queryset = Product.objects.all()
-#     serializer_class = ProductSerializer
-#     filter_backends = (DjangoFilterBackend,)
-#     filterset_fields = ('category', 'in_stock')
-#
-#
-# @permission_classes((IsOwnerOrReadOnly,))
-# class BookSerializer(serializers.ModelSerializer):
-#     owner = serializers.HiddenField(
-#         default=serializers.CurrentUserDefault()
-#     )
-#     class Meta:
-#         model = Book
-#         fields = ('title','category','status','availability','owner')
